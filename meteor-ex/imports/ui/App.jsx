@@ -8,8 +8,10 @@ export default class App extends Component{
     render(){ return(
         <div>
         <TitleBar title="Meteor Score Keep" subtitle="Developed by Juanse"/>
-        <PlayerList players={this.props.players}/>
-        <AddPlayer/>
+        <div className="wrapper">
+            <PlayerList players={this.props.players}/>
+            <AddPlayer/>
+        </div>
       </div>
       );
     }
