@@ -1,7 +1,18 @@
 import React, {Component} from "react";
+import { browserHistory } from "react-router";
 
 export default class Link extends Component {
+
+    logout(){
+        browserHistory.push("/");
+    }
+
     render(){
-        return <h1>Short Lnk</h1>
+        return (
+            <div>
+                <h1>Links</h1>
+                <button onClick={this.logout.bind(this)}>Log out</button>
+            </div>
+        );
     }
 }
